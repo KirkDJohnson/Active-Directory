@@ -60,12 +60,12 @@ After creating a new inputs.conf file, I logged into splunk via web browser on t
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/33292b90-987b-44e7-9037-ce643fe3737e" height="80%" width="80%" alt="Active Directory/Splunk"/>
 <br />
 <br />
-Now I moved over to the Windows Sever 2022 VM and begun configuring Active Directory Domain Servives (AD DS) and creatied a root domain<br/>
+Now I moved over to the Windows Sever 2022 VM and begun configuring Active Directory Domain Servives (AD DS) and created a root domain<br/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/8b0d0af9-e3d5-4ae9-bf43-ecd8cf080623" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/fcd4a767-4c0d-4a9e-8fc3-2e238cab305c" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
 <br />
-The login screen .../Administrator confirms that AD was configured correctly, so I logged back in and begun adding Users within a new Organziational Unit<br/>
+The login screen ...\Administrator confirms that AD was configured correctly, so I logged back in and begun adding Users within a new Organziational Unit<br/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/d300d3ec-7a57-4e41-a367-5481f0d2e947" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/6c04c03b-994f-4099-aa16-d3fc20d6528a" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
