@@ -53,14 +53,7 @@ Now that the Splunk sever has been configured I moved to the Windows 10 endpoint
 <br />
 Downloaded and configured splunk universal forwarder and sysmon with an external sysmon config on the Windows 10 endpoint (both to generate logs for splunk<br/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/5e37c734-e2d3-4568-a7f8-802529740a51" height="50%" width="50%" alt="Active Directory/Splunk"/>
-<br />
-<br />
-TEXT<br/>
-<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/121647b1-1ff1-456d-b185-5fcb12943b49" height="80%" width="80%" alt="Active Directory/Splunk"/>
-<br />
-<br /><br/>
-<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/121647b1-1ff1-456d-b185-5fcb12943b49" height="50%" width="50%" alt="Active Directory/Splunk"/>
-<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/7ce10f3e-d8b8-4387-baf8-bca915d70dbe" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/a867cbc9-c59b-4e69-b29a-98391983b338" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
 <br />
 After creating a new inputs.conf file, I logged into splunk via web browser on the W10 host to ensure logs are being forwarded<br/>
