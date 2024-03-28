@@ -12,14 +12,17 @@
 - <b>PowerShell</b> 
 - <b>Windows CMD</b>
 - <b>Sever Manager</b>
+- <b>Active Directory Domain Services</b>
+- <b>Splunk Enterprise and Universal Forwarder</b>
+- <b>Crowbar and Atomic Red Team</b> 
 
 <h2>Environments Used </h2>
-
+- <b>Oracle Virtual Box for all Virtual Machines</b>
 - <b>Windows 10 </b>
 - <b>Linux Ubuntu Server </b>
 - <b>Kali Linux</b>
-- <b>Microsoft Sever</b>
-<h2>Program walk-through:</h2>
+- <b>Windows Server 2022</b>
+<h2>Lab Overview</h2>
 
 <p align="center">
 Network Diagram<br/>
