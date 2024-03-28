@@ -56,28 +56,53 @@ TEXT<br/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/121647b1-1ff1-456d-b185-5fcb12943b49" height="80%" width="80%" alt="Active Directory/Splunk"/>
 <br />
 <br /><br/>
-<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/121647b1-1ff1-456d-b185-5fcb12943b49" height="80%" width="80%" alt="Active Directory/Splunk"/>
-<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/7ce10f3e-d8b8-4387-baf8-bca915d70dbe" height="80%" width="80%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/121647b1-1ff1-456d-b185-5fcb12943b49" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/7ce10f3e-d8b8-4387-baf8-bca915d70dbe" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
 <br />
 After creating a new inputs.conf file, I logged into splunk via web browser on the W10 host to ensure logs are being forwarded<br/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/33292b90-987b-44e7-9037-ce643fe3737e" height="80%" width="80%" alt="Active Directory/Splunk"/>
 <br />
 <br />
-Now I moved over to the Windows Sever 2022 VM and begun configuring Active Directory Domain Servives (AD DS)<br/>
-<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/8b0d0af9-e3d5-4ae9-bf43-ecd8cf080623" height="80%" width="80%" alt="Active Directory/Splunk"/>
+Now I moved over to the Windows Sever 2022 VM and begun configuring Active Directory Domain Servives (AD DS) and creatied a root domain<br/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/8b0d0af9-e3d5-4ae9-bf43-ecd8cf080623" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/fcd4a767-4c0d-4a9e-8fc3-2e238cab305c" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
 <br />
-TEXT<br/>TEXT<br/>
-<img src="" height="80%" width="80%" alt="Active Directory/Splunk"/>
+The login screen .../Administrator confirms that AD was configured correctly, so I logged back in and begun adding Users within a new Organziational Unit<br/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/d300d3ec-7a57-4e41-a367-5481f0d2e947" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/6c04c03b-994f-4099-aa16-d3fc20d6528a" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
 <br />
-TEXT<br/>TEXT<br/>
-<img src="" height="80%" width="80%" alt="Active Directory/Splunk"/>
+Back on the Windows 10 endpoint, I became apart of the ADlab.local domain/forest I created on the Windows Domain Controller, restarted and logged in as the created user with active direcotry<br/>TEXT<br/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/14366df9-ed18-44fb-88c6-febe3f1e35b7" height="80%" width="80%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/66441845-135c-47bf-a549-d36c2b657c99" height="80%" width="80%" alt="Active Directory/Splunk"/>
 <br />
 <br />
-TEXT<br/>
+Now for the fun part, I launched Kali Linux and begun prepping a brute force attack against the Active Directory accounts I created, I used the tool crowbar with the rockyou.txt passwordfile (I did nano the file and add the actual password for it to work)<br/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/c1028223-927d-4f71-97f8-34e9ab3bb458" height="80%" width="80%" alt="Active Directory/Splunk"/>
+<br />
+<br />
+Back to splunk, the UID 4625 indicates a failed login attempt on windows, and the command I ran on kali used the file 50 times which can be seen on splunk, the alerts were generated at the same time 9:21:27.000, clear sign of brute force attack<br/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/35ce4897-14e2-47d9-9b1c-9f3d256f9b71" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/7cbb6800-f80b-4619-8e70-cd98c10d4f5b" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<br />
+<br />
+Lastly to generate more logs for splunk I installed Atomic-Redteam that uses MITTER ATT@CK vectors (an attacker tool) on the W10 endpoint and used T1136.001 to create a new account<br/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/432fa735-4dcd-4199-b2a2-16a79a7a36dc" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/ef2f43c9-ff51-43b5-9a87-eca445ffdfb6" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<br />
+<br />
+<br/>
+Earlier in powershell, you can see that a new user was successfully created which can be seen in the splunk logs. The  Mitre Att&ck page for T1136
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/6bfe171b-e430-4305-ab2e-9a48a74f121d" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/a0ae1d7a-2340-40f2-8044-bbb3ed89d63f" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<br />
+<br />
+
+
 <h2>Thoughts</h2>
+This was definetly the most comprehensive well rounded lab I have done. It involved considerable network provisioning by confiuring multiple IP and the entire Actice Directory and adding users to it. It signficantly advanced by knowledge of cybersecurity blue teaming by crating rules in splunk, parsing the logs generating and identifying security incidents and increased knowledge of how red-teamers or maklicious actors would conduct a brute force attack. Moreover, it required me to research different attack vectors and splunk configuration rules something that is crucial skill to have as a cybersecurity professional. However, the lab was also extremely stressful and had many hiccups from the multiple VMs running on my local computer using up too much RAM and crashing, not asssigning enough storage space to kali and having to research how to increase storage to the partition and so on. It was a marathon of a lab to conduct in one sitting but absoutely worth it for the hands on experience I got in so many disiplines within cybersecurity.
 <!--
  ```diff
 - text in red
