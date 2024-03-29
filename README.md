@@ -11,10 +11,11 @@
 
 - <b>PowerShell</b> 
 - <b>Windows CMD</b>
-- <b>linux Terminal</b>
+- <b>Linux Terminal</b>
 - <b>Sever Manager</b>
 - <b>Active Directory Domain Services</b>
 - <b>Splunk Enterprise and Universal Forwarder</b>
+- </b>Splunk Search Processing Language (SPL)</b> 
 - <b>Crowbar and Atomic Red Team</b> 
 
 <h2>Environments Used </h2>
@@ -27,7 +28,7 @@
 <h2>Lab Overview</h2>
 
 <p align="center">
-Network Diagram<br/>
+Creating a visual network diagram with draw[.]io<br/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/81584485-1c09-4c29-a5a7-2a3513a92323" height="80%" width="80%" alt="Active Directory/Splunk"/>
 <br />
 <br />
@@ -45,8 +46,8 @@ After adding user: kirk to vboxsf, I mounted vboxsf to access a folder on my loc
 <br />
 <br />
 Moved Splunk to the /opt/splunk/ direcotry and changed user to splunk, and configured splunk to start on boot as user splunk<br/>
-<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/cb9283fa-3d6b-4eef-adbe-8f417b4046bc" height="50%" width="50%" alt="Active Directory/Splunk"/>
-<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/560da01c-755b-410f-a198-451e5658ca47" height="50%" width="50%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/cb9283fa-3d6b-4eef-adbe-8f417b4046bc" height="50%" width="80%" alt="Active Directory/Splunk"/>
+<img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/560da01c-755b-410f-a198-451e5658ca47" height="50%" width="80%" alt="Active Directory/Splunk"/>
 <br />
 <br />
 Now that the Splunk sever has been configured, I moved to the Windows 10 endpoint and configured its network settings statically<br/>
