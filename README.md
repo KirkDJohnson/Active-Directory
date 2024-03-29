@@ -68,7 +68,7 @@ Now I moved over to the Windows Sever 2022 VM and begun configuring Active Direc
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/fcd4a767-4c0d-4a9e-8fc3-2e238cab305c" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
 <br />
-The login screen ...\Administrator confirms that AD was configured correctly, so I logged back in as admin and begun adding users to a new Organziational Unit<br/>
+The login screen ...\Administrator confirms that AD was configured correctly, so I logged back in as admin and begun adding users to a new Organizational Unit<br/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/d300d3ec-7a57-4e41-a367-5481f0d2e947" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/6c04c03b-994f-4099-aa16-d3fc20d6528a" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
@@ -78,7 +78,7 @@ Back on the Windows 10 VM, I became apart of the ADlab.local domain/forest I cre
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/66441845-135c-47bf-a549-d36c2b657c99" height="80%" width="80%" alt="Active Directory/Splunk"/>
 <br />
 <br />
-Now for the fun part, I launched Kali Linux and begun preparing a brute-force attack against the Active Directory account I created, I used the tool crowbar with the rockyou.txt passwordfile (I did nano the file and add the actual password for it to work)<br/>
+Now for the fun part, I launched Kali Linux and begun preparing a brute-force attack against the Active Directory account I created, I used the tool crowbar with the rockyou.txt password file (I did nano the file and add the actual password for it to crack the account)<br/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/c1028223-927d-4f71-97f8-34e9ab3bb458" height="80%" width="80%" alt="Active Directory/Splunk"/>
 <br />
 <br />
@@ -87,13 +87,13 @@ Back to splunk, the EventID 4625 indicates a failed login attempt on windows, an
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/7cbb6800-f80b-4619-8e70-cd98c10d4f5b" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
 <br />
-Lastly to generate more logs for splunk I installed Atomic Red Team that uses MITTER ATT@CK vectors (an attacker tool) on the W10 endpoint and used T1136.001 to create a new local account<br/>
+Lastly to generate more logs for splunk I installed Atomic Red Team that uses MITTER ATT&CK vectors (an attacker tool) on the W10 endpoint and used T1136.001 to create a new local account<br/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/432fa735-4dcd-4199-b2a2-16a79a7a36dc" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/ef2f43c9-ff51-43b5-9a87-eca445ffdfb6" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
 <br />
 <br/>
-Earlier in powershell, you can see that a new user was successfully created which can be seen in the splunk logs. The Mitre Att&ck page for T1136 I used.
+Earlier in powershell, you can see that a new user was successfully created which can be seen in the splunk logs. This was the Mitre Att&ck page for T1136 I used.<br />
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/6bfe171b-e430-4305-ab2e-9a48a74f121d" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <img src="https://github.com/KirkDJohnson/Active-Directory-/assets/164972007/a0ae1d7a-2340-40f2-8044-bbb3ed89d63f" height="50%" width="50%" alt="Active Directory/Splunk"/>
 <br />
@@ -101,7 +101,7 @@ Earlier in powershell, you can see that a new user was successfully created whic
 
 
 <h2>Thoughts</h2>
-This was definitely the most comprehensive well rounded lab I have done. It involved network and account provisioning by confiuring multiple IP, entire Actice Directory and adding users to it. It signficantly advanced by knowledge of cybersecurity blue teaming by creating rules in splunk, parsing the logs, and generating and identifying security incidents. The lab also increased my knowledge of how red-teamers or malicious actors would conduct a brute force attack in a live environment. I tried to be very methocical in my approach to this by first drawing up how I wanted the end result to look or a simple illustration of how it may look in real life without leveraging VMs on one local network. Moreover, it required me to research different attack vectors and splunk configuration rules something that is crucial skill to have as a cybersecurity professional. However, the lab was also extremely stressful and had many hiccups from the multiple VMs running on my local computer using up too much RAM and crashing, not asssigning enough storage space to kali and having to research how to increase storage to the partition and so on. It was a marathon of a lab to conduct in one sitting but absoutely worth it for the hands on experience I got in so many disiplines within cybersecurity.
+This was definitely the most comprehensive well rounded lab I have done. It involved network and account provisioning by confiuring multiple IP addresses and the entire Actice Directory and adding users to it. It signficantly advanced by knowledge of cybersecurity blue teaming by creating rules in splunk, parsing the logs, and generating and identifying security incidents. The lab also increased my knowledge of how red-teamers or malicious actors could conduct a brute force attack in a live environment. I tried to be very methodical in my approach to this by first drawing up how I wanted the end result to look or a simple illustration of how it may look in real life environment without leveraging VMs. Moreover, it required me to research different attack vectors and splunk configuration rules something that is a crucial skill to have as a cybersecurity professional. However, the lab was also extremely stressful and had many hiccups ranging from the multiple VMs running on my local computer using up too much RAM and crashing, not asssigning enough storage space to kali and having to research how to increase storage to the partition and so on. It was a marathon of a lab to conduct in one sitting but absoutely worth it for the hands on experience I got in so many disiplines within cybersecurity.
 <!--
  ```diff
 - text in red
