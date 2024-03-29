@@ -1,4 +1,4 @@
-<h1>Comprehensive Lab</h1>
+<h1>Active Directory and Splunk Lab</h1>
 
 
 
